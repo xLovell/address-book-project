@@ -1,0 +1,94 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Shannan Ney",
+            "photo": "https://puu.sh/JIdBu.png",
+            "phone": "(678) 7575347",
+            "email": "sney0@cnet.com",
+            "address": "707 Meadow Valley Way",
+            "state": "GA"
+        },
+        {
+            "id": 2,
+            "name": "Gabbey Laven",
+            "photo": "https://static.demilked.com/wp-content/uploads/2019/04/5cb6d34f775c2-stock-models-share-weirdest-stories-photo-use-102-5cb5c725bc378__700.jpg",
+            "phone": "(904) 9304903",
+            "email": "glaven1@myspace.com",
+            "address": "7834 Warbler Terrace",
+            "state": "FL"
+        },
+        {
+            "id": 3,
+            "name": "Haleigh Duggary",
+            "photo": "https://puu.sh/JIdC8.png",
+            "phone": "(616) 4065527",
+            "email": "hduggary2@t.co",
+            "address": "6 Cherokee Junction",
+            "state": "MI"
+        },
+        {
+            "id": 4,
+            "name": "Susan O'Spellissey",
+            "photo": "https://puu.sh/JIdCg.png",
+            "phone": "(352) 7608396",
+            "email": "sospellissey3@so-net.ne.jp",
+            "address": "99 Buhler Lane",
+            "state": "FL"
+        },
+        {
+            "id": 5,
+            "name": "Thayne Feaveryear",
+            "photo": "https://slm-assets.secondlife.com/assets/17466008/lightbox/the-elder-scrolls-v-skyrim-special-edition_feyq.jpg?1497006152",
+            "phone": "(941) 4025198",
+            "email": "tfeaveryear4@goo.ne.jp",
+            "address": "0130 Dayton Circle",
+            "state": "FL"
+        },
+        {
+            "id": 6,
+            "name": "Mallory Geram",
+            "photo": "https://www.allaboutbirds.org/guide/assets/photo/300200841-480px.jpg",
+            "phone": "(614) 6125955",
+            "email": "mgeram5@prweb.com",
+            "address": "913 Dayton Avenue",
+            "state": "OH"
+        },
+        {
+            "id": 7,
+            "name": "Tiebold Blatchford",
+            "photo": "https://www.webbikeworld.com/wp-content/uploads/2023/03/The-Distinguished-Gentlemans-Ride1.jpg",
+            "phone": "(304) 2961592",
+            "email": "tblatchford6@ftc.gov",
+            "address": "5 Norway Maple Court",
+            "state": "WV"
+        },
+        {
+            "id": 8,
+            "name": "Marlane Nattriss",
+            "photo": "https://puu.sh/JIdDg.png",
+            "phone": "(401) 8762491",
+            "email": "mnattriss7@hud.gov",
+            "address": "40687 Colorado Center",
+            "state": "RI"
+        },
+        {
+            "id": 9,
+            "name": "Sammy Shenley",
+            "photo": "https://static.wikia.nocookie.net/sammy-and-friends/images/3/35/Sammy_Square.png/revision/latest/thumbnail/width/360/height/360?cb=20190922223308",
+            "phone": "(615) 6094342",
+            "email": "sshenley8@uol.com.br",
+            "address": "54 Independence Trail",
+            "state": "TN"
+        },
+        {
+            "id": 10,
+            "name": "Margery Rieger",
+            "photo": "https://hips.hearstapps.com/hmg-prod/images/margaret-thatcher_500x500_gettyimages-108932085.jpg",
+            "phone": "(208) 8565927",
+            "email": "mrieger9@dyndns.org",
+            "address": "9590 Holy Cross Place",
+            "state": "ID"
+        }
+    ]
+}
