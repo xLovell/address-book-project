@@ -2,6 +2,20 @@ const API = "http://localhost:3000/contacts"
 
 let contactList = []
 
+let addContact = false
+
+const addBtn = document.getElementById("new-contact-btn");
+const contactFormContainer = document.getElementById("add-contact-form");
+addBtn.addEventListener("click", () => {
+    addContact = !addContact;
+    if (addContact) {
+        contactFormContainer.style.display = "block";
+    } else {
+        contactFormContainer.style.display = "none";
+    }
+});
+
+
 fetch(API)
     .then(res => res.json())
     .then(json => {
@@ -9,7 +23,6 @@ fetch(API)
         renderContacts()
     })
 
-// side bar elements
 
 function renderContacts(contacts) {
     contactList.forEach(renderContact)
