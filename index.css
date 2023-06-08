@@ -2,15 +2,22 @@ body {
     width: auto;
     margin: 10px auto;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    color: #F1F6F9;
+    background:#212A3E;
 }
 
 #contact-info {
     float: left;
     width: auto;
     position: sticky;
-    border: 1px solid pink;
-    padding-left: 100px;
-    padding-right: 100px;
+    border: 1px solid #F1F6F9;
+    padding-left: 125px;
+    padding-right: 125px;
+    margin-top: 21px;
+    color: #F1F6F9;
+    background: #394867;
 }
 
 
@@ -37,18 +44,32 @@ body {
 .detail-image {
     align-items: center;
     justify-content: center;
-    width: 450px; 
-    height: 450px; 
+    width: 400px; 
+    height: 400px; 
     object-fit: cover;
 }
 
 .contact-card {
     border: 1px solid;
     padding: 1%;
+    text-align: left;
+    font-size: 18px;
 }
+
+#name {
+    text-align: center;
+    margin-left: 3%;
+}
+
 
 .contact-card:hover {
     cursor: pointer;
+    background-color: #394867;
+}
+
+.contact-card:active {
+    cursor: pointer;
+    background-color: #212A3E;
 }
 
 h1,h2,h3,p {
@@ -60,9 +81,50 @@ h1,h2,h3,p {
     top: 10px;
     left: 620px;
     padding: 3px 3px 1px 3px;
+    background-color: #CF6679;
 }
 
 .delete-button:hover {
     cursor: pointer;
-    background-color: rgb(221, 65, 65);
+    background-color: #B00020;
+}
+
+#new-contact-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #D8C4A4;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.input-text {
+    white-space: pre-line;
+}
+
+#add-contact-form {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.info-header {
+    font-size: 17px;
+    color: #D8C4A4;
+    margin-right: 35%;
+}
+
+#name-display {
+    font-size: 24px;
+    margin: 10px;
+}
+
+
+#phone-display, #email-display, #address-display {
+    font-size: 20px;
+    margin: 10px;
+    text-align: left;
+    margin-left: 30%;
 }
