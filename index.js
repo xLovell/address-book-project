@@ -4,6 +4,8 @@ let contactList = []
 
 let addContact = false
 
+let currentContact = ""
+
 const addBtn = document.getElementById("new-contact-btn");
 const contactFormContainer = document.getElementById("add-contact-form");
 addBtn.addEventListener("click", () => {
@@ -27,6 +29,8 @@ fetch(API)
 function renderContacts() {
     document.getElementById("contact-list").innerHTML = ""
     contactList.forEach(renderContact)
+    contactDetails(contactList[0])
+    currentContact = contactList[0]
 }
 
 function renderContact(contact) {
@@ -38,7 +42,10 @@ function renderContact(contact) {
     `
     document.getElementById('contact-list').append(card)
 
-    card.addEventListener('click', () => contactDetails(contact))
+    card.addEventListener('click', () => {
+        contactDetails(contact)
+        currentContact = contact
+    })
 }
 
 function contactDetails(contact) {
@@ -53,6 +60,21 @@ function contactDetails(contact) {
     contactDetail.querySelector('#email-display').textContent = contact.email
     contactDetail.querySelector('#address-display').textContent = `${contact.address}, ${contact.state}`
 
+    document.getElementById("delete").addEventListener("click", () => deleteContact(currentContact))
+}
+
+function deleteContact(contact) {
+    fetch(`${API}/${contact.id}`, {
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        method: "DELETE",
+    })
+        .then(() => {
+            contactList = contactList.filter(e => e.id !== contact.id)
+            renderContacts()
+        })
 }
 
 
@@ -76,14 +98,14 @@ function addNewContact(event) {
             "Content-Type": "application/json",
             Accept: "application/json"
         },
-        method:"POST",
+        method: "POST",
         body: JSON.stringify(newContact),
     })
-    .then(res => res.json())
-    .then(json => {
-        contactList.push(json)
-        renderContacts()
-    })
+        .then(res => res.json())
+        .then(json => {
+            contactList.push(json)
+            renderContacts()
+        })
 
     form.reset()
 }
