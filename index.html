@@ -14,9 +14,25 @@
 	<div id="contact-header">
 		<h1>Address Book</h1>
 	</div>
-	<div id="add-contact-form">
-
+	<div id="add-contact-form" style="display:none">
+		<form id="new-contact-form" class="new-contact-form">
+			<h3>New Contact</h3>
+			<input type="text" name="name" value="" placeholder="Enter contact name..." class="input-text" />
+			<br>
+			<input type="text" name="photo" value="" placeholder="Enter contact image..." class="input-text" />
+			<br>
+			<input type="text" name="phone" value="" placeholder="Enter contact phone number..." class="input-text" />
+			<br>
+			<input type="text" name="email" value="" placeholder="Enter contact email..." class="input-text" />
+			<br>
+			<input type="text" name="address" value="" placeholder="Enter contact address..." class="input-text" />
+			<br>
+			<input type="text" name="state" value="" placeholder="Enter contact state..." class="input-text" />
+			<br>
+			<input type="submit" name="submit" value="Create New Contact" class="submit"/>
+		</form>
 	</div>
+	<button id="new-contact-btn">Add new contact</button>
 	<div id="contact-list">
 
 	</div>
