@@ -8,8 +8,8 @@ function renderContact(contact) {
     const card = document.createElement('div')
     card.classList.add('contact-card')
     card.innerHTML = `
-    <p1 id="name">${contact.name}</p1>
     <img id="contact-photo" src="${contact.photo}" alt=${contact.name} />
+    <p1 id="name">${contact.name}</p1>
     `
     document.getElementById('contact-list').append(card)
 
