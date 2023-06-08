@@ -2,6 +2,20 @@ const API = "http://localhost:3000/contacts"
 
 let contactList = []
 
+let addContact = false
+
+const addBtn = document.getElementById("new-contact-btn");
+const contactFormContainer = document.getElementById("add-contact-form");
+addBtn.addEventListener("click", () => {
+    addContact = !addContact;
+    if (addContact) {
+        contactFormContainer.style.display = "block";
+    } else {
+        contactFormContainer.style.display = "none";
+    }
+});
+
+
 fetch(API)
     .then(res => res.json())
     .then(json => {
@@ -9,9 +23,9 @@ fetch(API)
         renderContacts()
     })
 
-// side bar elements
 
-function renderContacts(contacts) {
+function renderContacts() {
+    document.getElementById("contact-list").innerHTML = ""
     contactList.forEach(renderContact)
 }
 
@@ -44,4 +58,38 @@ function contactDetails(contact) {
 }
 
 
+
 // function deleteContact(event, contact)
+=======
+document.getElementById("new-contact-form").addEventListener("submit", addNewContact)
+
+function addNewContact(event) {
+    event.preventDefault()
+    const form = event.target
+
+    const newContact = {
+        name: form.name.value,
+        photo: form.photo.value,
+        phone: form.phone.value,
+        email: form.email.value,
+        address: form.address.value,
+        state: form.state.value,
+    }
+
+    fetch(API, {
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        method:"POST",
+        body: JSON.stringify(newContact),
+    })
+    .then(res => res.json())
+    .then(json => {
+        contactList.push(json)
+        renderContacts()
+    })
+
+    form.reset()
+}
+
